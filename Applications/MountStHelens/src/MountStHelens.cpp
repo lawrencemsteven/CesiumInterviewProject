@@ -1,9 +1,8 @@
 #include <TerrainHeightmap.h>
 
 int main() {
-	std::filesystem::path preEruptionLocation{std::string{MOUNT_ST_HELENS_DATA_FOLDER} +
-											  std::string{"/pre.data"}};
-	// preEruptionLocation.append("pre.data");
+	std::filesystem::path preEruptionLocation{MOUNT_ST_HELENS_DATA_FOLDER};
+	preEruptionLocation.append("pre.data");
 
 	std::filesystem::path postEruptionLocation{MOUNT_ST_HELENS_DATA_FOLDER};
 	postEruptionLocation.append("post.data");
