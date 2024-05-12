@@ -2,6 +2,11 @@ include(CMakeFiles.cmake)
 
 add_library(TerrainHeightmap STATIC ${TerrainHeightmap_Files})
 
+target_link_libraries(TerrainHeightmap
+	PUBLIC
+		glm::glm
+)
+
 target_include_directories(TerrainHeightmap
 	PUBLIC
 		"./src"
