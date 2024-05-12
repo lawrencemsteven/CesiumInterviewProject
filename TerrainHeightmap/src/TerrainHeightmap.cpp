@@ -14,4 +14,11 @@ namespace TerrainHeightmap {
 		return walk(glm::vec2{start}, glm::vec2{end});
 	}
 
+	int8_t Terrain::getHeight(const glm::vec2& pos) const {
+		return m_heightmap.getHeight(pos);
+	}
+
+	int8_t Terrain::getHeight(const glm::ivec2& pos) const {
+		return m_heightmap.getHeight(pos);
+	}
 }
