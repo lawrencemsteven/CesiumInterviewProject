@@ -10,9 +10,9 @@ namespace TerrainHeightmap::Detail {
 
 	double Heightmap::getHeight(const glm::vec2& pos) const {
 		const uint32_t lowY	 = static_cast<uint32_t>(std::floor(pos.y));
-		const uint32_t highY = static_cast<uint32_t>(std::ceil(pos.y));
+		const uint32_t highY = lowY + 1;
 		const uint32_t lowX	 = static_cast<uint32_t>(std::floor(pos.x));
-		const uint32_t highX = static_cast<uint32_t>(std::ceil(pos.x));
+		const uint32_t highX = lowX + 1;
 
 		glm::uvec2 vertA{};
 		const glm::uvec2 vertB{highX, lowY};
